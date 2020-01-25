@@ -8,12 +8,16 @@
   <div class="modal-body">
     <div class="align-content-center">
       <img src="{{imageURL}}" alt="Fountain Image" align="center">
-      <p *ngFor="let rating of fountain.ratings | keyvalue">
-        Water Bottle Filler: {{rating.value.bottle}}
-        Taste: {{rating.value.taste}}
-        Temperature: {{rating.value.temp}}
-        Pressure: {{rating.value.press}}
-      </p>
+      <div *ngFor="let rating of fountain.ratings | keyvalue" class="card" style="width: auto;">
+        <div class="card-body">
+          <p class="card-header">Rating {{rating.key}}</p>
+          <p class="card-text" *ngIf="rating.value.bottle;">This fountain has a water bottle filler!!</p>
+          <p class="card-text" *ngIf="!rating.value.bottle;">This fountain does NOT have a water bottle filler</p>
+          <p class = "card-text">Taste: {{rating.value.taste}}</p>
+          <p class = "card-text">Temperature: {{rating.value.temp}}</p>
+          <p class = "card-text">Pressure: {{rating.value.press}}</p>
+        </div>
+      </div>
     </div>
   </div>
   <div class="modal-footer">
