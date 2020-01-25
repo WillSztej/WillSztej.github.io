@@ -3,3 +3,7 @@ agm-map {
   height: 70vh;
   width: 75vw;
 }
+
+.align-content-center {
+  text-align: center;
+}

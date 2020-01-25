@@ -23,9 +23,12 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@ng-bootstrap/ng-bootstrap": "^5.2.1",
     "bootstrap": "^4.4.1",
     "firebase": "^7.7.0",
     "jquery": "^3.4.1",
+    "ng-bootstrap": "^1.6.3",
+    "ng-sidebar": "^9.2.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

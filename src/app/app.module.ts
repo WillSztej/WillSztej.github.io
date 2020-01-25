@@ -10,6 +10,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AngularFireStorageModule} from '@angular/fire/storage';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,9 +27,11 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireStorageModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    NgbModule
   ],
   providers: [AngularFirestore],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

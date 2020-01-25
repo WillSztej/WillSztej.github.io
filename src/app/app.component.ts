@@ -5,6 +5,7 @@ import {environment} from '../environments/environment';
 import {Fountain} from './fountain/fountain.model';
 import {FountainService} from './fountain/fountain.service';
 import { AngularFireStorage, AngularFireStorageReference } from '@angular/fire/storage';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -23,10 +24,14 @@ export class AppComponent implements OnInit {
     lng: -86.916861
   };
   fountains: Fountain[];
+  fountain: Fountain;
+  imageURL: string;
   markers: Marker[] = [];
   style = environment.mainMapStyle;
 
-  constructor(private fountainService: FountainService, private fireStorage: AngularFireStorage) { }
+  constructor(private fountainService: FountainService,
+              private fireStorage: AngularFireStorage,
+              private modalService: NgbModal) { }
 
   ngOnInit() {
     this.fountainService.getFountains().subscribe(data => {
@@ -63,10 +68,15 @@ export class AppComponent implements OnInit {
     });
   }
 
-  onFountainClicked(title: string) {
-    this.fireStorage.ref(this.fountains.find(o => o.id === title).picture).getDownloadURL().subscribe(url => {
-      console.log(url);
-      console.log('pulling up image');
+  onFountainClicked(title: string, longContent) {
+    this.fountain = this.fountains.find(o => o.id === title);
+    console.log(this.fountain);
+    this.fireStorage.ref(this.fountain.picture).getDownloadURL().subscribe(url => {
+      this.imageURL = url;
+      const modalRef = this.modalService.open(longContent, {
+        scrollable: true,
+        size: 'lg'
+      });
     });
   }
 }

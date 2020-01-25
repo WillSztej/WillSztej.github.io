@@ -1,3 +1,25 @@
+<ng-template #longContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="ftnName">Fountain {{fountain.id}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="align-content-center">
+      <img src="{{imageURL}}" alt="Fountain Image" align="center">
+      <p *ngFor="let rating of fountain.ratings | keyvalue">
+        Water Bottle Filler: {{rating.value.bottle}}
+        Taste: {{rating.value.taste}}
+        Temperature: {{rating.value.temp}}
+        Pressure: {{rating.value.press}}
+      </p>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
 <app-header></app-header>
 <agm-map [latitude]="location.lat"
          [longitude]="location.lng"
@@ -9,11 +31,8 @@
               [latitude]="marker.lat"
               [longitude]="marker.lng"
               [title]="marker.title"
-              (markerClick)="onFountainClicked(marker.title)">
+              (markerClick)="onFountainClicked(marker.title, longContent)">
   </agm-marker>
 </agm-map>
 <app-sidebar></app-sidebar>
-
-
-
 
