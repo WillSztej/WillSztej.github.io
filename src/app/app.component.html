@@ -1,7 +1,16 @@
-<app-fountain-test></app-fountain-test>
 <app-header></app-header>
-<agm-map [latitude]="location.lat" [longitude]="location.lng" [zoom]="zoom.defzoom" [minZoom]="zoom.minZoom" [maxZoom]="zoom.maxZoom">
-  <agm-marker *ngFor="let marker of markers" [latitude]="marker.lat" [longitude]="marker.lng"></agm-marker>
+<agm-map [latitude]="location.lat"
+         [longitude]="location.lng"
+         [zoom]="zoom.defzoom"
+         [minZoom]="zoom.minZoom"
+         [maxZoom]="zoom.maxZoom"
+         [styles]="style">
+  <agm-marker *ngFor="let marker of markers"
+              [latitude]="marker.lat"
+              [longitude]="marker.lng"
+              [title]="marker.title"
+              (markerClick)="onFountainClicked(marker.title)">
+  </agm-marker>
 </agm-map>
 <app-sidebar></app-sidebar>
 
