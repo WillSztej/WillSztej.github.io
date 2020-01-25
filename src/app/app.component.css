@@ -1,6 +1,6 @@
 agm-map {
   float: right;
-  height: 525px;
+  height: 90vh;
   width: 75vw;
 }
 
@@ -12,11 +12,6 @@ body {
   background-color: #e3f5fc;
   margin: 0;
   height: 100%;
-}
-
-.app {
-  min-height: 100%;
-  margin-bottom: -55px;
 }
 
 .align-content-center {
