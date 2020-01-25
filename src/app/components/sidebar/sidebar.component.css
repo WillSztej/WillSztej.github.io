@@ -1,5 +1,5 @@
 body {
-  min-width: 500px;
+  min-width: 25vw;
 }
 
 .hide {
@@ -35,7 +35,7 @@ body {
 #nav {
   font-family: Farah;
   text-align: center;
-  height: 465px;
+  height: 90vh;
   overflow:hidden;
   overflow-y: scroll;
   background-color: #43c7f7;
