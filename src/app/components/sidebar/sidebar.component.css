@@ -12,6 +12,7 @@ body {
   background-color: #82dafa;
   font-size: 21px;
   height: 60px;
+  font-family: Farah;
 }
 
 #myUL{
@@ -28,10 +29,11 @@ body {
   list-style: none;
   padding-top: 25px;
   padding-right:50px;
+  font-family: Farah;
 }
 
 #nav {
-  font-family: "Arial";
+  font-family: Farah;
   text-align: center;
   height: 465px;
   overflow:hidden;
