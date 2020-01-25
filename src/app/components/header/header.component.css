@@ -1,18 +1,31 @@
+
 #header {
-  padding-top: 15px;
-  padding-left: 20px;
+  height: 50px;
+  background-color: white;
+}
+
+#title {
+  font-style: inherit;
+  text-align: center;
+  padding-top: 18px;
+  padding-left: 250px;
   padding-bottom: 30px;
   align-content: center;
+  color: dodgerblue;
+  letter-spacing: 7px;
+  font-size: 15px;
 }
 
 #home {
-  padding-left: 20px;
-  padding-right: 100px;
+  padding-left: 395px;
+  padding-right: 200px;
 }
 #discussion {
-  padding-right: 100px;
+  padding-right: 200px;
 }
 
-#topnav {
-  padding-bottom: 30px;
+#topNav {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #b3e8fc;
 }
