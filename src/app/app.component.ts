@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 
 @Component({
@@ -6,10 +6,13 @@ import { AgmCoreModule } from '@agm/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'web-hydrate';
   lat = 40.427444;
   lng = -86.916861;
   zoom = 16;
   minZoom = 15;
+  ngOnInit(): void {
+
+  }
 }
