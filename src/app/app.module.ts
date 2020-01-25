@@ -15,7 +15,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    FountainTestComponent
+    FountainTestComponent,
   ],
   imports: [
     BrowserModule,
