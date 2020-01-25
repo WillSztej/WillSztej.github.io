@@ -2,6 +2,38 @@
   float:left;
 }
 
-#f1, #f2, #f3, #f4, #f5 {
-  padding-bottom: 30px;
+#fountain_header {
+  padding-left: 21px;
+  font-size: 21px;
+  height: 60px;
+}
+
+#list{
+  float:left;
+}
+
+#searchbar {
+  padding-left: 19px;
+  padding-bottom: 20px;
+}
+#myInput {
+
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 17%; /* Full-width */
+  font-size: 14px; /* Increase font-size */
+  padding: 12px 20px 12px 20px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#nav {
+  height: 345px;
+  width: 25%;
+  overflow:hidden;
+  overflow-y: scroll;
+}
+
+#list li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
 }

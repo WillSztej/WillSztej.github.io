@@ -1,15 +1,72 @@
 <body>
-<nav id="navbar">
-  <header id = "sidebar_heading">
-    Nearest Fountains
-  </header>
-  <ul class = "nav_list">
-    <li id = "f1">Fountain 1</li>
-    <li id = "f2">Fountain 2</li>
-    <li id = "f3">Fountain 3</li>
-    <li id = "f4">Fountain 4</li>
-    <li id = "f5">Fountain 5</li>
-  </ul>
+    <header id = "fountain_header">Nearest Fountains</header>
+    <div id="searchbar">
+    <input type="text" id="myInput" onkeyup="searchSort()"
+           placeholder="Search for fountain...">
+    </div>
 
-</nav>
+      <nav id = "nav">
+        <ul id="list">
+          <li>
+            <a href="#">Fountain 1</a>
+            <div class="card" style="width: 10rem;">
+              <img class="card-img-top" src="assets/fountain_images/fountain.png" alt="Fountain Image">
+              <div class="card-body">
+                <p class = "card-text">
+                  Fountain 1 - Lawson
+                </p>
+              </div>
+              <a href="#" class="btn btn-primary">See Reviews</a>
+            </div>
+          </li>
+
+          <li>
+            <a href="#">Fountain 2</a>
+            <div class="card" style="width: 10rem;">
+              <img class="card-img-top" src="assets/fountain_images/fountain.png" alt="Fountain Image">
+              <div class="card-body">
+                <p class = "card-text">
+                  Fountain 2 - Lawson
+                </p>
+              </div>
+              <a href="#" class="btn btn-primary">See Reviews</a>
+            </div>
+          </li>
+
+          <li>
+            <a href="#">Fountain 3</a>
+            <div class="card" style="width: 10rem;">
+              <img class="card-img-top" src="assets/fountain_images/fountain.png" alt="Fountain Image">
+              <div class="card-body">
+                <p class = "card-text">
+                  Fountain 3 - Lawson
+                </p>
+              </div>
+              <a href="#" class="btn btn-primary">See Reviews</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
 </body>
+
+<script>
+    function searchSort() {
+        // Declare variables
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('myInput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("list");
+        li = ul.getElementsByTagName('li');
+
+        // Loop through all list items, and hide those who don't match the search query
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
