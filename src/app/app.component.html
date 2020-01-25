@@ -1,3 +1,5 @@
+
+<body id="full_page">
 <ng-template #longContent let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="ftnName">Fountain {{fountain.id}}</h4>
@@ -21,23 +23,26 @@
   </div>
 </ng-template>
 <body>
-<app-header></app-header>
-<agm-map [latitude]="location.lat"
-         [longitude]="location.lng"
-         [zoom]="zoom.defzoom"
-         [minZoom]="zoom.minZoom"
-         [maxZoom]="zoom.maxZoom"
-         [styles]="style">
-  <agm-marker *ngFor="let marker of markers"
-              [latitude]="marker.lat"
-              [longitude]="marker.lng"
-              [title]="marker.title"
-              (markerClick)="onFountainClicked(marker.title, longContent)">
-  </agm-marker>
-</agm-map>
-<app-sidebar></app-sidebar>
+<div style="min-width: 800px; margin: 0 auto;">
+  <app-header></app-header>
+  <agm-map [latitude]="location.lat"
+           [longitude]="location.lng"
+           [zoom]="zoom.defzoom"
+           [minZoom]="zoom.minZoom"
+           [maxZoom]="zoom.maxZoom"
+           [styles]="style">
+    <agm-marker *ngFor="let marker of markers"
+                [latitude]="marker.lat"
+                [longitude]="marker.lng"
+                [title]="marker.title"
+                (markerClick)="onFountainClicked(marker.title, longContent)">
+    </agm-marker>
+  </agm-map>
+  <app-sidebar></app-sidebar>
+</div>
 </body>
 <app-footer></app-footer>
+</body>
 
 
 

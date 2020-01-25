@@ -1,11 +1,22 @@
 agm-map {
   float: right;
-  height: 75vh;
+  height: 525px;
   width: 75vw;
+}
+
+#full_page {
+  font-family: DINPro-Medium, Serif;
 }
 
 body {
   background-color: #e3f5fc;
+  margin: 0;
+  height: 100%;
+}
+
+.app {
+  min-height: 100%;
+  margin-bottom: -55px;
 }
 
 .align-content-center {

@@ -1,5 +1,5 @@
-.content {
-  float:left;
+body {
+  min-width: 500px;
 }
 
 .hide {
@@ -8,37 +8,32 @@
 
 #fountain_header {
   padding-top: 13px;
+  text-align: center;
   background-color: #82dafa;
-  padding-left: 53px;
   font-size: 21px;
   height: 60px;
 }
 
 #myUL{
-  float:left;
+  text-align: center;
+}
+
+.card {
+  margin: 0px auto;
+  float: none;
+  margin-bottom: 10px; /* Added */
 }
 
 #li1, #li2, #li3 {
   list-style: none;
-  text-align: center;
   padding-top: 25px;
-  padding-left: 14px;
-}
-
-#myInput {
-
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 17%; /* Full-width */
-  font-size: 14px; /* Increase font-size */
-  padding: 12px 20px 12px 20px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
+  padding-right:50px;
 }
 
 #nav {
-  height: 459px;
-  width: 267px;
+  font-family: "Arial";
+  text-align: center;
+  height: 465px;
   overflow:hidden;
   overflow-y: scroll;
   background-color: #43c7f7;
