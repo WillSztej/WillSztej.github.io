@@ -1,0 +1,7 @@
+body {
+  float: right;
+  background-color: #05b9fa;
+  z-index: -1;
+  width: 1200px;
+  height: 40px;
+}

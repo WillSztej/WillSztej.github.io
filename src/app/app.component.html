@@ -20,6 +20,7 @@
     <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
   </div>
 </ng-template>
+<body>
 <app-header></app-header>
 <agm-map [latitude]="location.lat"
          [longitude]="location.lng"
@@ -35,4 +36,9 @@
   </agm-marker>
 </agm-map>
 <app-sidebar></app-sidebar>
+</body>
+<app-footer></app-footer>
+
+
+
 

@@ -2,20 +2,29 @@
   float:left;
 }
 
+.hide {
+  display: none;
+}
+
 #fountain_header {
-  padding-left: 21px;
+  padding-top: 13px;
+  background-color: #82dafa;
+  padding-left: 53px;
   font-size: 21px;
   height: 60px;
 }
 
-#list{
+#myUL{
   float:left;
 }
 
-#searchbar {
-  padding-left: 19px;
-  padding-bottom: 20px;
+#li1, #li2, #li3 {
+  list-style: none;
+  text-align: center;
+  padding-top: 25px;
+  padding-left: 14px;
 }
+
 #myInput {
 
   background-position: 10px 12px; /* Position the search icon */
@@ -28,10 +37,11 @@
 }
 
 #nav {
-  height: 345px;
-  width: 25%;
+  height: 459px;
+  width: 267px;
   overflow:hidden;
   overflow-y: scroll;
+  background-color: #43c7f7;
 }
 
 #list li a:hover:not(.header) {
