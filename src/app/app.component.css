@@ -1,7 +1,11 @@
 agm-map {
   float: right;
-  height: 75vh;
+  height: 525px;
   width: 75vw;
+}
+
+#full_page {
+  font-family: DINPro-Medium, Serif;
 }
 
 body {

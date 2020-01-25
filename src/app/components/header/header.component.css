@@ -1,6 +1,7 @@
 
 #header {
   height: 50px;
+  background-image: linear-gradient(white, #05b9fa);
   background-color: white;
 }
 
@@ -11,17 +12,17 @@
   padding-left: 250px;
   padding-bottom: 30px;
   align-content: center;
-  color: dodgerblue;
+  color: White;
   letter-spacing: 7px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 #home {
-  padding-left: 395px;
-  padding-right: 200px;
+  padding-left: 30px;
+  padding-right: 50px;
 }
 #discussion {
-  padding-right: 200px;
+  padding-right: 50px;
 }
 
 #topNav {
