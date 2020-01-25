@@ -17,10 +17,10 @@ export class FountainService {
   }
 
   updateFountain(fountain: Fountain) {
-    this.firestore.doc('fountains/' + fountain.id).update(fountain);
+    return this.firestore.doc('fountains/' + fountain.id).update(fountain);
   }
 
-  deleteFountain(fountainID: string) {
-    this.firestore.doc('fountains/' + fountainID).delete();
+  deleteFountain(fountainID: number) {
+    return this.firestore.doc('fountains/' + fountainID).delete();
   }
 }
