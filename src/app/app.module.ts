@@ -7,10 +7,14 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { FountainTestComponent } from './fountain-test/fountain-test.component';
 import {AngularFirestore} from '@angular/fire/firestore';
+import { HeaderComponent } from './components/header/header.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    SidebarComponent,
     FountainTestComponent
   ],
   imports: [

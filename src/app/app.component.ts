@@ -15,5 +15,6 @@ export class AppComponent implements OnInit {
   maxZoom = 30;
 
   ngOnInit(): void {
+
   }
 }
