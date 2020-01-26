@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { AppComponent } from '../../app.component';
+import {Fountain} from '../../fountain/fountain.model';
+import {FountainService} from '../../fountain/fountain.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  @Input() appC: AppComponent;
+  @Input('fountains') fountains: Fountain[];
+  fountain: Fountain;
+  isLoaded = false;
+
+  constructor(private appComponent: AppComponent,
+              private fountainService: FountainService) { }
 
   ngOnInit() {
+  }
+
+  onClickSeeReviews(title: string, longContent) {
+    this.fountain = this.fountains.find(o => o.id === title);
+    const modalRef = this.appComponent.modalService.open(longContent, {
+      scrollable: true,
+      size: 'lg'
+    });
   }
 
   searchSort() {

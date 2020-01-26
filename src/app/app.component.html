@@ -1,4 +1,3 @@
-
 <body id="full_page">
 <ng-template #longContent let-modal>
   <div class="modal-header">
@@ -9,7 +8,7 @@
   </div>
   <div class="modal-body">
     <div class="align-content-center">
-      <img src="{{imageURL}}" alt="Fountain Image" align="center">
+      <img src="{{fountain.picture}}" alt="Fountain Image" align="center">
       <div *ngFor="let rating of fountain.ratings | keyvalue" class="card" style="width: auto;">
         <div class="card-body">
           <p class="card-header">Rating {{rating.key}}</p>
@@ -26,7 +25,6 @@
     <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
   </div>
 </ng-template>
-<body>
 <div style="min-width: 800px; margin: 0 auto;">
   <app-header></app-header>
   <agm-map [latitude]="location.lat"
@@ -44,7 +42,6 @@
   </agm-map>
   <app-sidebar></app-sidebar>
 </div>
-</body>
 <app-footer></app-footer>
 </body>
 

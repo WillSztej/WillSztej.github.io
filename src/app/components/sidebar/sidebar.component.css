@@ -24,7 +24,7 @@ body {
   margin-bottom: 10px; /* Added */
 }
 
-#li1, #li2, #li3 {
+[id^="cardFtn"] {
   list-style: none;
   padding-top: 25px;
   padding-right:50px;

@@ -25,13 +25,13 @@ export class AppComponent implements OnInit {
   };
   fountains: Fountain[];
   fountain: Fountain;
-  imageURL: string;
   markers: Marker[] = [];
   style = environment.mainMapStyle;
+  isLoaded = false;
 
   constructor(private fountainService: FountainService,
-              private fireStorage: AngularFireStorage,
-              private modalService: NgbModal) { }
+              public fireStorage: AngularFireStorage,
+              public modalService: NgbModal) { }
 
   ngOnInit() {
     this.fountainService.getFountains().subscribe(data => {
@@ -45,6 +45,7 @@ export class AppComponent implements OnInit {
       for (const fountain of this.fountains) {
         this.addMarker(fountain.location.lat, fountain.location.lng, fountain.id);
       }
+      this.isLoaded = true;
     });
   }
 
@@ -71,12 +72,9 @@ export class AppComponent implements OnInit {
   onFountainClicked(title: string, longContent) {
     this.fountain = this.fountains.find(o => o.id === title);
     console.log(this.fountain);
-    this.fireStorage.ref(this.fountain.picture).getDownloadURL().subscribe(url => {
-      this.imageURL = url;
-      const modalRef = this.modalService.open(longContent, {
-        scrollable: true,
-        size: 'lg'
-      });
+    const modalRef = this.modalService.open(longContent, {
+      scrollable: true,
+      size: 'lg'
     });
   }
 }

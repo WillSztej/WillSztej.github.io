@@ -1,47 +1,46 @@
-
+<ng-template #longContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="ftnName">Fountain {{fountain.id}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="align-content-center">
+      <img src="{{fountain.picture}}" alt="Fountain Image" align="center">
+      <div *ngFor="let rating of fountain.ratings | keyvalue" class="card" style="width: auto;">
+        <div class="card-body">
+          <p class="card-header">Rating {{rating.key}}</p>
+          <p class="card-text" *ngIf="rating.value.bottle;">This fountain has a water bottle filler!!</p>
+          <p class="card-text" *ngIf="!rating.value.bottle;">This fountain does NOT have a water bottle filler</p>
+          <p class = "card-text">Taste: {{rating.value.taste}}</p>
+          <p class = "card-text">Temperature: {{rating.value.temp}}</p>
+          <p class = "card-text">Pressure: {{rating.value.press}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
 <body>
 <div style="min-width: 80px; margin: 0 auto;">
 <header id = "fountain_header">
   Fountains near you...
 </header>
 <nav id = "nav">
-  <ul id="myUL">
-    <li id ="li1">
-      <a href="#">Fountain 1</a>
+  <ul *ngIf="appComponent.isLoaded" id="myUL">
+    <li *ngFor="let fountain of fountains" id ="cardFtn{{fountain.id}}">
+      <a href="#">Fountain {{fountain.id}}</a>
       <div class="card" style="width: 150px;">
-        <img class="card-img-top" src="assets/fountain_images/fountain.png" alt="Fountain Image">
+        <img class="card-img-top" src="{{fountain.picture}}" alt="Fountain Image">
         <div class="card-body">
           <p class = "card-text">
-            Fountain 1 - Lawson
+            Fountain {{fountain.id}}
           </p>
         </div>
-        <a href="#" class="btn btn-primary">See Reviews</a>
-      </div>
-    </li>
-
-    <li id ="li2">
-      <a href="#">Fountain 2</a>
-      <div class="card" style="width: 10rem;">
-        <img class="card-img-top" src="assets/fountain_images/fountain.png" alt="Fountain Image">
-        <div class="card-body">
-          <p class = "card-text">
-            Fountain 2 - Lawson
-          </p>
-        </div>
-        <a href="#" class="btn btn-primary">See Reviews</a>
-      </div>
-    </li>
-
-    <li id ="li3">
-      <a href="#">Fountain 3</a>
-      <div class="card" style="width: 10rem;">
-        <img class="card-img-top" src="assets/fountain_images/fountain.png" alt="Fountain Image">
-        <div class="card-body">
-          <p class = "card-text">
-            Fountain 3 - Lawson
-          </p>
-        </div>
-        <a href="#" class="btn btn-primary">See Reviews</a>
+        <a href="#" class="btn btn-primary" (click)='onClickSeeReviews(fountain.id, longContent)'>See Reviews</a>
       </div>
     </li>
   </ul>
