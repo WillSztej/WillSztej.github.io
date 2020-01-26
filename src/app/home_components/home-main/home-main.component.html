@@ -1,3 +1,8 @@
+<ng-template #t let-fill="fill">
+  <span class="star" [class.full]="fill === 100">
+    <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+  </span>
+</ng-template>
 <ng-template #longContent let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="ftnName">Fountain {{fountain.id}}</h4>
@@ -11,11 +16,15 @@
       <div *ngFor="let rating of fountain.ratings | keyvalue" class="card" style="width: auto;">
         <div class="card-body">
           <p class="card-header">Rating {{rating.key}}</p>
-          <p class="card-text" *ngIf="rating.value.bottle;">This fountain has a water bottle filler!!</p>
-          <p class="card-text" *ngIf="!rating.value.bottle;">This fountain does NOT have a water bottle filler</p>
-          <p class = "card-text">Taste: {{rating.value.taste}}</p>
-          <p class = "card-text">Temperature: {{rating.value.temp}}</p>
-          <p class = "card-text">Pressure: {{rating.value.press}}</p>
+          <p class = "card-text">Bottle Filler:</p>
+          <img id="checkmark" *ngIf="rating.value.bottle;" src="../../../assets/front_end_images/checkmark.png">
+          <img id="xmark" *ngIf="!rating.value.bottle;" src="../../../assets/front_end_images/xmark.png">
+          <p class = "card-text">Taste:</p>
+          <ngb-rating [(rate)]="rating.value.taste" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+          <p class = "card-text">Temperature:</p>
+          <ngb-rating [(rate)]="rating.value.temp" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+          <p class = "card-text">Pressure:</p>
+          <ngb-rating [(rate)]="rating.value.press" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
         </div>
       </div>
     </div>
