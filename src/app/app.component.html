@@ -11,14 +11,9 @@
   </div>
   <div id = "topNav">
     <nav>
-      <a [routerLink] ="'/home'" routerLinkActive="active" >Home</a>
-    </nav>
-    <nav>
-      <a [routerLink] ="'/discussion'" routerLinkActive="active" >Discussion</a>
-    </nav>
-    <router-outlet></router-outlet>
-    <nav>
-      <a [routerLink] = "'/my profile'" routerLinkActive="active" >My Profile</a>
+      <a id = "router_home" [routerLink] ="'/home'" routerLinkActive="active" >Home</a>
+      <a id = "router_discussion" [routerLink] ="'/discussion'" routerLinkActive="active" >Discussion</a>
+      <a id = "router_profile" [routerLink] = "'/my profile'" routerLinkActive="active" >My Profile</a>
     </nav>
     <router-outlet></router-outlet>
   </div>
