@@ -1,36 +1,22 @@
-
-#header {
-  height: 50px;
+#responsive-navbar {
+  height: 5vh;
   background-image: linear-gradient(to right, white, #cff2ff);
-  background-color: white;
+}
+
+#nav {
+  margin-bottom: 0;
 }
 
 #title {
   background: -webkit-linear-gradient(midnightblue, cyan);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding-left: 10px;
   font-family: Arial, serif;
-  padding-bottom: 20px;
   align-content: center;
   letter-spacing: 2px;
-  padding-top: 6px;
-  font-size: 35px;
+  font-size: 25px;
 }
 
-#topNavUpperBoarder {
-  height: 3px;
-  color: midnightblue;
-}
-
-#topNav {
-  background-image: linear-gradient(to right, #2248a1, #1a4fc9);
-  font-family: Roboto, serif;
-}
-
-#router_home, #router_discussion, #router_profile {
-  color: white;
-  font-size: 14px;
-  padding-left: 15px;
-  padding-right: 50px;
+.mb-3 {
+  margin-bottom: 0 !important;
 }

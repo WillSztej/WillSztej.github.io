@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html>
-<div id="whole-page" style="min-width: 200px; margin: 0 auto;">
-  <div id = "header">
-    <!--img id = "img1" src="assets/front_end_images/logo.png" alt="Purdue Logo"-->
-    <header>
-      <h1 id = "title">The Purdue Watering Hole</h1>
-    </header>
-  </div>
-  <div id = "topNavUpperBoarder"></div>
-  <div id = "topNav">
-    <nav>
-        <a id = "router_home" [routerLink] ="'/home'" routerLinkActive="active" >home</a>
-        <a id = "router_discussion" [routerLink] ="'/discussion'" routerLinkActive="active" >discussion</a>
-        <a id = "router_profile" [routerLink] = "'/my profile'" routerLinkActive="active" >profile</a>
-    </nav>
+<div id="whole-page" style="min-width: 200px;">
+    <nav id="responsive-navbar" class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+      <a id="title" class="navbar-brand" [routerLink]="'/home'">The Purdue Watering Hole</a>
+      <button class="navbar-toggler"  routerLinkActive="active" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+        &#9776;
+      </button>
+      <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a id="router_discussion" class="nav-link" [routerLink]="'/discussion'" routerLinkActive="active" (click)="isMenuCollapsed = true">Discussion</a>
+          </li>
+          <li class="nav-item">
+            <a id="router_profile" class="nav-link" [routerLink]="'/myprofile'" routerLinkActive="active" (click)="isMenuCollapsed = true">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a id="router_about" class="nav-link" [routerLink]="'/about'" (click)="isMenuCollapsed = true">About</a>
+          </li>
+        </ul>
+      </div></nav>
     <router-outlet></router-outlet>
-  </div>
 </div>
-</html>
-
-
-
-
-
-
-
-

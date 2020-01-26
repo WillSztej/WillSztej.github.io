@@ -17,6 +17,7 @@ import { DiscussionComponent } from './discussion_componenets/discussion/discuss
 import { ProfileComponent } from './profile_componenets/profile/profile.component';
 import {RouterModule} from '@angular/router';
 import { HomeMainComponent } from './home_components/home-main/home-main.component';
+import { AboutComponent } from './about_components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeMainComponent } from './home_components/home-main/home-main.compone
     FooterComponent,
     DiscussionComponent,
     ProfileComponent,
-    HomeMainComponent
+    HomeMainComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

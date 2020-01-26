@@ -18,6 +18,8 @@ export class SidebarComponent implements OnInit, OnChanges {
   @Input()
   fountains: Fountain[];
   fountain: Fountain;
+  location: Location;
+  userLocation: boolean;
 
   fountainNames: string[] = [];
   addRating: Rating = {
@@ -42,7 +44,7 @@ export class SidebarComponent implements OnInit, OnChanges {
       debounceTime(200),
       distinctUntilChanged(),
       map(term => term.length < 2 ? []
-        : this.fountainNames.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10)))
+        : this.fountainNames.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10)));
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.fountains && this.homeComponent.isLoaded) {

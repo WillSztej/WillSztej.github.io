@@ -5,15 +5,15 @@ import { AppComponent} from './app.component';
 import {DiscussionComponent} from './discussion_componenets/discussion/discussion.component';
 import {ProfileComponent} from './profile_componenets/profile/profile.component';
 import {HomeMainComponent} from './home_components/home-main/home-main.component';
-
+import { AboutComponent } from './about_components/about/about.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeMainComponent },
   { path: 'discussion', component: DiscussionComponent },
-  { path: 'profile', component: ProfileComponent }
+  { path: 'profile', component: ProfileComponent },
+  { path: 'about', component: AboutComponent }
 ];
-
 
 @NgModule({
   declarations: [],
