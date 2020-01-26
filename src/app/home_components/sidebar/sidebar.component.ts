@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, Input, SimpleChanges} from '@angular/core';
+import {Component, OnChanges, OnInit, Input, SimpleChanges, TemplateRef} from '@angular/core';
 import { HomeMainComponent } from '../home-main/home-main.component';
 import {Fountain} from '../../fountain/fountain.model';
 import {FountainService} from '../../fountain/fountain.service';
@@ -39,7 +39,7 @@ export class SidebarComponent implements OnInit, OnChanges {
       for (let i = 0; i < this.fountains.length; i++) {
         this.fountainNames.push('Fountain ' + this.fountains[i].id);
       }
-      console.log(this.fountainNames)
+      console.log(this.fountainNames);
       this.ngOnInit();
     }
   }
@@ -52,6 +52,15 @@ export class SidebarComponent implements OnInit, OnChanges {
     });
   }
 
+  searchBarClickSeeReviews(title: string, longContent) {
+    this.fountain = this.fountains.find(o => o.id === title.split(' ')[1]);
+    if (this.fountain !== undefined) {
+      const modalRef = this.homeComponent.modalService.open(longContent, {
+        scrollable: true,
+        size: 'lg'
+      });
+    }
+  }
 }
 
 

@@ -31,6 +31,15 @@ body {
   color: midnightblue;
 }
 
+#search-area {
+  align-content: normal;
+}
+
+#search-button {
+  margin: 5px;
+  display: inline-flex;
+}
+
 #sidebar-div {
   text-align: center;
 }

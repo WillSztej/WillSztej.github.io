@@ -41,8 +41,11 @@
   </header>
   <header id = "gradient2"></header>
   <header id = "gradient3"></header>
-  <input id="typeahead-basic" type="text" placeholder="Search for a fountain" class="form-control"
-         [(ngModel)]="model" [ngbTypeahead]="search"/>
+  <div id="search-area">
+    <input #typeahead id="typeahead-basic" type="text" placeholder="Search for a fountain" class="form-control"
+           [(ngModel)]="model" [ngbTypeahead]="search"/>
+    <button id="search-button" class="btn btn-outline-primary mb-2 mr-2" (click)="searchBarClickSeeReviews(typeahead.value, longContent)">See Reviews</button>
+  </div>
   <nav id = "nav">
     <ul *ngIf="homeComponent.isLoaded" id="myUL">
       <li *ngFor="let fountain of fountains" id ="cardFtn{{fountain.id}}">
