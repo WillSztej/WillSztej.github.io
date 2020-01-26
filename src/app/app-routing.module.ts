@@ -8,7 +8,7 @@ import {HomeMainComponent} from './home_components/home-main/home-main.component
 
 
 const routes: Routes = [
-  { path: '', component: AppComponent, pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeMainComponent },
   { path: 'discussion', component: DiscussionComponent },
   { path: 'profile', component: ProfileComponent }

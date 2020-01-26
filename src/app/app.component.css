@@ -32,8 +32,13 @@
 
 #topNav {
   font-family: Roboto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 1px;
+  padding-bottom: 9px;
   background-color: #b3e8fc;
+}
+
+#router_home, #router_discussion, #router_profile {
+  padding-left: 26px;
+  color: dodgerblue;
 }
 
