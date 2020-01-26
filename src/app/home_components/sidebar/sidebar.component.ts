@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnChanges, OnInit, Input, SimpleChanges} from '@angular/core';
 import { AppComponent } from '../../app.component';
 import {Fountain} from '../../fountain/fountain.model';
 import {FountainService} from '../../fountain/fountain.service';
@@ -8,18 +8,24 @@ import {FountainService} from '../../fountain/fountain.service';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit, OnChanges {
 
-  @Input() appC: AppComponent;
-  @Input('fountains') fountains: Fountain[];
+  @Input()
+  fountains: Fountain[];
   fountain: Fountain;
-  isLoaded = false;
 
   constructor(private appComponent: AppComponent,
               private fountainService: FountainService) { }
 
   ngOnInit() {
   }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.fountains) {
+      this.ngOnInit();
+    }
+  }
+
 
   onClickSeeReviews(title: string, longContent) {
     this.fountain = this.fountains.find(o => o.id === title);

@@ -26,7 +26,6 @@ export class HomeMainComponent implements OnInit {
   };
   fountains: Fountain[];
   fountain: Fountain;
-  imageURL: string;
   markers: Marker[] = [];
   style = environment.mainMapStyle;
 
@@ -71,12 +70,9 @@ export class HomeMainComponent implements OnInit {
   onFountainClicked(title: string, longContent) {
     this.fountain = this.fountains.find(o => o.id === title);
     console.log(this.fountain);
-    this.fireStorage.ref(this.fountain.picture).getDownloadURL().subscribe(url => {
-      this.imageURL = url;
-      const modalRef = this.modalService.open(longContent, {
-        scrollable: true,
-        size: 'lg'
-      });
+    const modalRef = this.modalService.open(longContent, {
+      scrollable: true,
+      size: 'lg'
     });
   }
 }

@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent} from './app.component';
 import {DiscussionComponent} from './discussion_componenets/discussion/discussion.component';
 import {ProfileComponent} from './profile_componenets/profile/profile.component';
-import {HomeMainComponent} from "./home_components/home-main/home-main.component";
+import {HomeMainComponent} from './home_components/home-main/home-main.component';
 
 
 const routes: Routes = [
