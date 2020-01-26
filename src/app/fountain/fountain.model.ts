@@ -1,5 +1,6 @@
 export class Fountain {
   id: string;
+  bottle: boolean;
   location: {
     lat: number;
     lng: number;

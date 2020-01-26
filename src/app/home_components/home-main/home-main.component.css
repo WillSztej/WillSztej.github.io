@@ -18,6 +18,11 @@ body {
   margin-top: 2rem;
 }
 
+#add-rating-card {
+  width: auto;
+  font-weight: bolder;
+}
+
 .card-header {
   height: 3rem;
 }

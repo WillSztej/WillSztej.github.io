@@ -6,6 +6,7 @@ import {Fountain} from 'src/app/fountain/fountain.model';
 import {FountainService} from 'src/app/fountain/fountain.service';
 import { AngularFireStorage, AngularFireStorageReference } from '@angular/fire/storage';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {AngularFirestore} from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-home-main',
@@ -29,9 +30,14 @@ export class HomeMainComponent implements OnInit {
   markers: Marker[] = [];
   style = environment.mainMapStyle;
   isLoaded = false;
+  addRating: Rating = {
+    press: 0,
+    taste: 0,
+    temp: 0
+  };
 
   constructor(private fountainService: FountainService,
-              private fireStorage: AngularFireStorage,
+              public firestore: AngularFirestore,
               public modalService: NgbModal) { }
 
   ngOnInit() {
@@ -77,6 +83,25 @@ export class HomeMainComponent implements OnInit {
       size: 'lg'
     });
   }
+
+  submitRating() {
+    let ratingNum = 1;
+    for (const rating in this.fountain.ratings) {
+      if (this.fountain.ratings.hasOwnProperty(rating)) {
+        ratingNum = ratingNum + 1;
+      }
+    }
+    const ratingName = 'rating' + ratingNum.toString();
+    this.fountain.ratings[ratingName] = this.addRating;
+    this.firestore.collection('fountains').doc(this.fountain.id).update({
+      ratings: this.fountain.ratings
+    });
+    this.addRating = {
+      press: 0,
+      taste: 0,
+      temp: 0
+    };
+  }
 }
 
 interface Location {
@@ -94,5 +119,11 @@ interface Marker {
   lat: number;
   lng: number;
   title: string;
+}
+
+interface Rating {
+  press: number;
+  taste: number;
+  temp: number;
 }
 

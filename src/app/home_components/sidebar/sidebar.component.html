@@ -13,18 +13,32 @@
   <div class="modal-body">
     <div class="align-content-center">
       <img src="{{fountain.picture}}" alt="Fountain Image" align="center">
+      <p class = "card-text">Bottle Filler:</p>
+      <img id="checkmark" *ngIf="fountain.bottle;" src="../../../assets/front_end_images/checkmark.png">
+      <img id="xmark" *ngIf="!fountain.bottle;" src="../../../assets/front_end_images/xmark.png">
       <div *ngFor="let rating of fountain.ratings | keyvalue" class="card" style="width: auto;">
         <div class="card-body">
           <p class="card-header">Rating {{rating.key}}</p>
-          <p class = "card-text">Bottle Filler:</p>
-          <img id="checkmark" *ngIf="rating.value.bottle;" src="../../../assets/front_end_images/checkmark.png">
-          <img id="xmark" *ngIf="!rating.value.bottle;" src="../../../assets/front_end_images/xmark.png">
           <p class = "card-text">Taste:</p>
           <ngb-rating [(rate)]="rating.value.taste" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
           <p class = "card-text">Temperature:</p>
           <ngb-rating [(rate)]="rating.value.temp" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
           <p class = "card-text">Pressure:</p>
           <ngb-rating [(rate)]="rating.value.press" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+        </div>
+      </div>
+      <div id="add-rating-card" class="card" style="width: auto;">
+        <div class="card-body">
+          <p class="card-header">Add a rating below!</p>
+          <p class = "card-text">Taste:</p>
+          <ngb-rating [(rate)]="addRating.taste" [starTemplate]="t" max="5"></ngb-rating>
+          <p class = "card-text">Temperature:</p>
+          <ngb-rating [(rate)]="addRating.temp" [starTemplate]="t" max="5"></ngb-rating>
+          <p class = "card-text">Pressure:</p>
+          <ngb-rating [(rate)]="addRating.press" [starTemplate]="t" max="5"></ngb-rating>
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-primary" (click)="submitRating()">Submit</button>
         </div>
       </div>
     </div>

@@ -52,6 +52,16 @@ body {
   text-align: center;
 }
 
+ngb-rating {
+  margin-top: -5rem;
+  margin-bottom: -6rem;
+}
+
+#add-rating-card {
+  width: auto;
+  font-weight: bolder;
+}
+
 .card {
   display: inline-list-item;
   margin: 0px auto;
