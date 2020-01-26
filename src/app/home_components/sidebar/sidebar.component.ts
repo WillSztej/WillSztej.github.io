@@ -1,15 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, Input, SimpleChanges} from '@angular/core';
+import { AppComponent } from '../../app.component';
+import {Fountain} from '../../fountain/fountain.model';
+import {FountainService} from '../../fountain/fountain.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit, OnChanges {
 
-  constructor() { }
+  @Input()
+  fountains: Fountain[];
+  fountain: Fountain;
+
+  constructor(private appComponent: AppComponent,
+              private fountainService: FountainService) { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.fountains) {
+      this.ngOnInit();
+    }
+  }
+
+
+  onClickSeeReviews(title: string, longContent) {
+    this.fountain = this.fountains.find(o => o.id === title);
+    const modalRef = this.appComponent.modalService.open(longContent, {
+      scrollable: true,
+      size: 'lg'
+    });
   }
 
   searchSort() {

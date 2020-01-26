@@ -18,8 +18,6 @@ import { ProfileComponent } from './profile_componenets/profile/profile.componen
 import {RouterModule} from '@angular/router';
 import { HomeMainComponent } from './home_components/home-main/home-main.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +25,7 @@ import { HomeMainComponent } from './home_components/home-main/home-main.compone
     FooterComponent,
     DiscussionComponent,
     ProfileComponent,
-    HomeMainComponent,
+    HomeMainComponent
   ],
   imports: [
     BrowserModule,

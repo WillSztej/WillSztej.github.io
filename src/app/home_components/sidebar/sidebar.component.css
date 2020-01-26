@@ -27,7 +27,16 @@ body {
   margin-bottom: 10px; /* Added */
 }
 
-#li1, #li2, #li3 {
+.card-img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  height: 3rem;
+}
+
+[id^="cardFtn"] {
   list-style: none;
   padding-top: 25px;
   padding-right:50px;
