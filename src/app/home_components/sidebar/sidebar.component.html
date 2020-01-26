@@ -26,10 +26,12 @@
 </ng-template>
 <body>
 <div style="min-width: 80px; margin: 0 auto;">
+  <header id = "gradient1"></header>
 <header id = "fountain_header">
   Fountains near you...
 </header>
-  <header id = "gradient"></header>
+  <header id = "gradient2"></header>
+  <header id = "gradient3"></header>
 <nav id = "nav">
   <ul *ngIf="appComponent.isLoaded" id="myUL">
     <li *ngFor="let fountain of fountains" id ="cardFtn{{fountain.id}}">
