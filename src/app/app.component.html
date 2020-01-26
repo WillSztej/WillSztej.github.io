@@ -2,7 +2,7 @@
 <div id="whole-page" style="min-width: 200px;">
     <nav id="responsive-navbar" class="navbar navbar-expand-lg navbar-light bg-light mb-3">
       <a id="title" class="navbar-brand" [routerLink]="'/home'">The Purdue Watering Hole</a>
-      <button class="navbar-toggler"  routerLinkActive="active" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+      <button class="navbar-toggler" routerLinkActive="active" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
         &#9776;
       </button>
       <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
@@ -11,7 +11,7 @@
             <a id="router_discussion" class="nav-link" [routerLink]="'/discussion'" routerLinkActive="active" (click)="isMenuCollapsed = true">Discussion</a>
           </li>
           <li class="nav-item">
-            <a id="router_profile" class="nav-link" [routerLink]="'/myprofile'" routerLinkActive="active" (click)="isMenuCollapsed = true">Profile</a>
+            <a id="router_profile" class="nav-link" [routerLink]="'/profile'" routerLinkActive="active" (click)="isMenuCollapsed = true">Profile</a>
           </li>
           <li class="nav-item">
             <a id="router_about" class="nav-link" [routerLink]="'/about'" (click)="isMenuCollapsed = true">About</a>
