@@ -33,15 +33,10 @@
 <nav id = "nav">
   <ul *ngIf="appComponent.isLoaded" id="myUL">
     <li *ngFor="let fountain of fountains" id ="cardFtn{{fountain.id}}">
-      <a href="#">Fountain {{fountain.id}}</a>
       <div class="card" style="width: 150px;">
-        <img class="card-img-top" src="{{fountain.picture}}" alt="Fountain Image">
-        <div class="card-body">
-          <p class = "card-text">
-            Fountain {{fountain.id}}
-          </p>
-        </div>
-        <a href="#" class="btn btn-primary" (click)='onClickSeeReviews(fountain.id, longContent)'>See Reviews</a>
+        <div class="card-header">Fountain {{fountain.id}}</div>
+        <img class="card-img" src="{{fountain.picture}}" alt="Fountain Image">
+        <button href="home" class="btn btn-primary" (click)='onClickSeeReviews(fountain.id, longContent)'>See Reviews</button>
       </div>
     </li>
   </ul>
