@@ -34,24 +34,26 @@
   </div>
 </ng-template>
 <body>
-<div style="min-width: 80px; margin: 0 auto;">
+<div id="sidebar-div" style="min-width: 80px; margin: 0 auto;">
   <header id = "gradient1"></header>
-<header id = "fountain_header">
-  Fountains near you...
-</header>
+  <header id = "fountain_header">
+    Fountains near you...
+  </header>
   <header id = "gradient2"></header>
   <header id = "gradient3"></header>
-<nav id = "nav">
-  <ul *ngIf="homeComponent.isLoaded" id="myUL">
-    <li *ngFor="let fountain of fountains" id ="cardFtn{{fountain.id}}">
-      <div class="card" style="width: 150px;">
-        <div class="card-header">Fountain {{fountain.id}}</div>
-        <img class="card-img" src="{{fountain.picture}}" alt="Fountain Image">
-        <button href="home" class="btn btn-primary" (click)='onClickSeeReviews(fountain.id, longContent)'>See Reviews</button>
-      </div>
-    </li>
-  </ul>
-</nav>
+  <input id="typeahead-basic" type="text" placeholder="Search for a fountain" class="form-control"
+         [(ngModel)]="model" [ngbTypeahead]="search"/>
+  <nav id = "nav">
+    <ul *ngIf="homeComponent.isLoaded" id="myUL">
+      <li *ngFor="let fountain of fountains" id ="cardFtn{{fountain.id}}">
+        <div class="card" style="width: 150px;">
+          <div class="card-header">Fountain {{fountain.id}}</div>
+          <img class="card-img" src="{{fountain.picture}}" alt="Fountain Image">
+          <button href="home" class="btn btn-primary" (click)='onClickSeeReviews(fountain.id, longContent)'>See Reviews</button>
+        </div>
+      </li>
+    </ul>
+  </nav>
 </div>
 </body>
 
