@@ -1,6 +1,6 @@
 #header {
   height: 50px;
-  background-image: linear-gradient(white, #6ed8ff);
+  background-image: linear-gradient(to right, white, #cff2ff);
   background-color: white;
 }
 
@@ -9,11 +9,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-left: 10px;
-  font-family: "Arial Rounded MT Bold";
-  padding-bottom: 30px;
+  font-family: Roboto, serif;
+  padding-bottom: 20px;
   align-content: center;
-  letter-spacing: 7px;
-  font-size: 40px;
+  letter-spacing: 2px;
+  padding-top: 6px;
+  font-size: 35px;
 }
 
 #home {
@@ -31,19 +32,28 @@
 }
 
 #topNavUpperBoarder {
-  height: 3px;
+  height: 2px;
   color: #6d95f2;
 }
 
 #topNav {
-  background-image: linear-gradient(#2248a1, #1a4fc9);
+  background-image: linear-gradient(to right, #2248a1, #1a4fc9);
   font-family: Roboto, serif;
-  padding-top: 1px;
-  padding-bottom: 9px;
+}
+
+.boxed {
+  border: 4px solid lightskyblue;
+  display: inline-block;
+  fill: green;
+  align-content: center;
 }
 
 #router_home, #router_discussion, #router_profile {
-  padding-left: 26px;
+  text-align: center;
+  font-size: 12px;
   color: white;
+  padding-right: 60px;
+  padding-left: 5px;
+
 }
 
