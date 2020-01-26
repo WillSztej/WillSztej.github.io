@@ -1,27 +1,39 @@
-agm-map {
-  float: right;
-  height: 90vh;
-  width: 75vw;
+#header {
+  height: 50px;
+  background-image: linear-gradient(white, #05b9fa);
+  background-color: white;
 }
 
-#full_page {
-  font-family: DINPro-Medium, Serif;
-}
-
-body {
-  background-color: #e3f5fc;
-  margin: 0;
-  height: 100%;
-}
-
-.align-content-center {
+#title {
+  font-family: Roboto;
   text-align: center;
+  padding-top: 18px;
+  padding-left: 250px;
+  padding-bottom: 30px;
+  align-content: center;
+  color: White;
+  letter-spacing: 7px;
+  font-size: 20px;
 }
 
-.card {
-  margin-top: 2rem;
+#home {
+  padding-left: 30px;
+  padding-right: 50px;
+  color: white;
+}
+#discussion {
+  padding-right: 50px;
+  color: white;
 }
 
-.card-header {
-  height: 3rem;
+#account {
+  color:white;
 }
+
+#topNav {
+  font-family: Roboto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #b3e8fc;
+}
+
