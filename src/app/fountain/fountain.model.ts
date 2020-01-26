@@ -1,4 +1,5 @@
 export class Fountain {
+  distance: number;
   id: string;
   bottle: boolean;
   location: {

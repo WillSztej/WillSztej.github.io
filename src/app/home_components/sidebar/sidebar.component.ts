@@ -19,7 +19,6 @@ export class SidebarComponent implements OnInit, OnChanges {
   fountains: Fountain[];
   fountain: Fountain;
   location: Location;
-  userLocation: boolean;
 
   fountainNames: string[] = [];
   addRating: Rating = {
@@ -47,10 +46,23 @@ export class SidebarComponent implements OnInit, OnChanges {
         : this.fountainNames.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10)));
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes.fountains && this.homeComponent.isLoaded) {
+      const userLat = this.homeComponent.location.lat;
+      const userLng = this.homeComponent.location.lng;
+      if (changes.fountains && this.homeComponent.isLoaded) {
+        // tslint:disable-next-line:prefer-for-of
+        for (let i = 0; i < this.fountains.length; i++) {
+          this.fountains[i].distance = this.homeComponent.distance(this.homeComponent.location.lat, this.homeComponent.location.lng,
+            this.fountains[i].location.lat, this.fountains[i].location.lng);
+        }
+        this.fountains.sort((a, b) => (a.distance) < (b.distance) ? -1 : 1);
+        this.ngOnInit();
+      }
+      /*
+      if (changes.fountains && this.homeComponent.isLoaded) {
       this.fountains.sort((a, b) => (parseInt(a.id, 10) > parseInt(b.id, 10)) ? 1 : -1);
       this.ngOnInit();
-    }
+      }
+      */
   }
 
   onClickSeeReviews(title: string, longContent) {

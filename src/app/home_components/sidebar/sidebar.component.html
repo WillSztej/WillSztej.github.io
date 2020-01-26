@@ -63,6 +63,7 @@
         <div class="card" style="width: 150px;">
           <div class="card-header">Fountain {{fountain.id}}</div>
           <img class="card-img" src="{{fountain.picture}}" alt="Fountain Image">
+          <div class="card-footer" style="font-size: 14px"> {{fountain.distance.toFixed(2)}} miles </div>
           <button id="see-reviews-btn" href="home" class="btn btn-primary" (click)='onClickSeeReviews(fountain.id, longContent)'>See Reviews</button>
         </div>
       </li>
