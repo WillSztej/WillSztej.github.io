@@ -4,7 +4,7 @@ body {
 
 #gradient1 {
   height: 5px;
-  background-image: linear-gradient(#83858a, white);
+  background-image: linear-gradient(#a1a1a1, white);
 }
 
 #gradient2 {
@@ -12,7 +12,7 @@ body {
   height: 5px;
 }
 #gradient3 {
-  background-image: linear-gradient(#168ab5, #6ed8ff);
+  background-image: linear-gradient(#a1a1a1, white);
   height: 5px;
 }
 
@@ -58,7 +58,7 @@ body {
   height: 90vh;
   overflow:hidden;
   overflow-y: scroll;
-  background-color: #6ed8ff;
+  background-image: linear-gradient(to bottom, white, #cff2ff);
 }
 
 #list li a:hover:not(.header) {

@@ -10,9 +10,15 @@
   <div id = "topNavUpperBoarder"></div>
   <div id = "topNav">
     <nav>
-      <a id = "router_home" [routerLink] ="'/home'" routerLinkActive="active" >Home</a>
-      <a id = "router_discussion" [routerLink] ="'/discussion'" routerLinkActive="active" >Discussion</a>
-      <a id = "router_profile" [routerLink] = "'/my profile'" routerLinkActive="active" >My Profile</a>
+        <div class ="boxed">
+        <a id = "router_home" [routerLink] ="'/home'" routerLinkActive="active" >Home</a>
+        </div>
+        <div class ="boxed">
+        <a id = "router_discussion" [routerLink] ="'/discussion'" routerLinkActive="active" >Discussion</a>
+        </div>
+        <div class ="boxed">
+        <a id = "router_profile" [routerLink] = "'/my profile'" routerLinkActive="active" >My Profile</a>
+        </div>
     </nav>
     <router-outlet></router-outlet>
   </div>
