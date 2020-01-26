@@ -1,7 +1,20 @@
 body {
-  background-image: linear-gradient(#6ed8ff, white);
+  position:sticky;
+  background-color: black;
   z-index: -1;
-  padding-top: 30px;
-  height: 55px;
+  width: 10px;
+  height: 649px;
 }
+
+#border {
+  height: 3px;
+  background-color: white;
+}
+
+#bottom_tag {
+  height: 50px;
+  background-image: linear-gradient(to right, #cff2ff, white);
+  background-color: white;
+}
+
 

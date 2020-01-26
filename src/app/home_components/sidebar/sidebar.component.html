@@ -1,3 +1,5 @@
+
+<div id="sidebar-div">
 <ng-template #t let-fill="fill">
   <span class="star" [class.full]="fill === 100">
     <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
@@ -34,7 +36,7 @@
   </div>
 </ng-template>
 <body>
-<div id="sidebar-div" style="min-width: 80px; margin: 0 auto;">
+<div id="sidebar-div2" style=" margin: 0 auto;">
   <header id = "gradient1"></header>
   <header id = "fountain_header">
     Fountains near you...
@@ -56,31 +58,9 @@
   </nav>
 </div>
 </body>
+</div>
+<div id="column"></div>
 
-<script>
-
-
-</script>
-
-
-<!--    <script>-->
-<!--        function searchSort() {-->
-<!--            var input, filter, ul, li, a, i, txtValue;-->
-<!--            input = document.getElementById("myInput");-->
-<!--            filter = input.value.toUpperCase();-->
-<!--            ul = document.getElementById("myUL");-->
-<!--            li = ul.getElementsByTagName("li");-->
-<!--            for (i = 0; i < li.length; i++) {-->
-<!--                a = li[i].getElementsByTagName("a")[0];-->
-<!--                txtValue = a.textContent || a.innerText;-->
-<!--                if (txtValue.toUpperCase().indexOf(filter) > -1) {-->
-<!--                    li[i].style.display = "";-->
-<!--                } else {-->
-<!--                    li[i].style.display = "none";-->
-<!--                }-->
-<!--            }-->
-<!--        }-->
-<!--    </script>-->
 
 
 
