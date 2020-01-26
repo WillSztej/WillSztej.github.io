@@ -1,19 +1,19 @@
 #header {
   height: 50px;
-  background-image: linear-gradient(white, #05b9fa);
+  background-image: linear-gradient(white, #6ed8ff);
   background-color: white;
 }
 
 #title {
-  font-family: Roboto;
-  text-align: center;
-  padding-top: 18px;
-  padding-left: 250px;
+  background: -webkit-linear-gradient(midnightblue, cyan);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 10px;
+  font-family: "Arial Rounded MT Bold";
   padding-bottom: 30px;
   align-content: center;
-  color: White;
   letter-spacing: 7px;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 #home {
@@ -30,15 +30,20 @@
   color:white;
 }
 
+#topNavUpperBoarder {
+  height: 3px;
+  color: #6d95f2;
+}
+
 #topNav {
-  font-family: Roboto;
+  background-image: linear-gradient(#2248a1, #1a4fc9);
+  font-family: Roboto, serif;
   padding-top: 1px;
   padding-bottom: 9px;
-  background-color: #b3e8fc;
 }
 
 #router_home, #router_discussion, #router_profile {
   padding-left: 26px;
-  color: dodgerblue;
+  color: white;
 }
 

@@ -2,19 +2,28 @@ body {
   min-width: 25vw;
 }
 
-#gradient {
-  background-image: linear-gradient(#66d6ff, #28c0f7);
-  height: 20px;
+#gradient1 {
+  height: 5px;
+  background-image: linear-gradient(#83858a, white);
+}
+
+#gradient2 {
+  background-color: #1a4fc9;
+  height: 5px;
+}
+#gradient3 {
+  background-image: linear-gradient(#168ab5, #6ed8ff);
+  height: 5px;
 }
 
 #fountain_header {
-  padding-top: 13px;
+  padding-top: 5px;
   text-align: center;
-  background-color: #82dafa;
+  background-color: white;
   font-size: 21px;
-  height: 60px;
-  font-family: Roboto;
-  color: white;
+  height: 45px;
+  font-family: Roboto, serif;
+  color: midnightblue;
 }
 
 #myUL{
@@ -41,16 +50,16 @@ body {
   list-style: none;
   padding-top: 25px;
   padding-right:50px;
-  font-family: Roboto;
+  font-family: Roboto, serif;
 }
 
 #nav {
-  font-family: Roboto;
+  font-family: Roboto, serif;
   text-align: center;
   height: 90vh;
   overflow:hidden;
   overflow-y: scroll;
-  background-color: #28c0f7;
+  background-color: #6ed8ff;
 }
 
 #list li a:hover:not(.header) {
