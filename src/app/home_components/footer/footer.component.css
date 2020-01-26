@@ -1,9 +1,10 @@
 body {
   position:sticky;
+  float: bottom;
   background-color: black;
   z-index: -1;
   width: 10px;
-  height: 649px;
+  height: 20px;
 }
 
 #border {
@@ -13,8 +14,6 @@ body {
 
 #bottom_tag {
   height: 50px;
-  background-image: linear-gradient(to right, #cff2ff, white);
-  background-color: white;
 }
 
 

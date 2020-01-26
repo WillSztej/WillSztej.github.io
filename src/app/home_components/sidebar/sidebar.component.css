@@ -1,16 +1,124 @@
+/*#sidebar-div {*/
+/*  position: sticky;*/
+/*  float:left;*/
+/*  width: 25vw;*/
+/*}*/
 
+/*#gradient1 {*/
+/*  height: 5px;*/
+/*  background-image: linear-gradient(#a1a1a1, white);*/
+/*}*/
 
-#sidebar-div {
-  position: sticky;
-  float:left;
+/*#gradient2 {*/
+/*  background-color: #1a4fc9;*/
+/*  height: 5px;*/
+/*}*/
+/*#gradient3 {*/
+/*  background-image: linear-gradient(#a1a1a1, white);*/
+/*  height: 5px;*/
+/*}*/
+
+/*#fountain_header {*/
+/*  padding-left: 38px;*/
+/*  padding-top: 5px;*/
+/*  background-color: white;*/
+/*  font-size: 21px;*/
+/*  height: 45px;*/
+/*  font-family: Roboto, serif;*/
+/*  color: midnightblue;*/
+/*}*/
+
+/*#search-area {*/
+/*  align-content: center;*/
+/*}*/
+
+/*#search-button {*/
+/*  margin: 5px;*/
+/*  display: inline;*/
+/*}*/
+
+/*#sidebar-div {*/
+/*  text-align: center;*/
+/*  height: 75vh;*/
+/*}*/
+
+/*ngb-rating {*/
+/*  margin-top: -5rem;*/
+/*  margin-bottom: -6rem;*/
+/*}*/
+
+/*#add-rating-card {*/
+/*  width: auto;*/
+/*  font-weight: bolder;*/
+/*}*/
+
+/*.card-img {*/
+/*  margin-top: 1rem;*/
+/*  margin-bottom: 1rem;*/
+/*}*/
+
+/*.card-header {*/
+/*  height: 3rem;*/
+/*}*/
+
+/*#typeahead-basic {*/
+/*  display: inline;*/
+/*}*/
+
+/*[id^="cardFtn"] {*/
+/*  display: inline;*/
+/*  padding-top: 25px;*/
+/*  font-family: Roboto, serif;*/
+/*  width: auto*/
+/*}*/
+
+/*#nav {*/
+/*  position:sticky;*/
+/*  width: auto;*/
+/*  font-family: Roboto, serif;*/
+/*  height: 75vh;*/
+/*  overflow: hidden;*/
+/*  overflow-y: scroll;*/
+/*  background-image: linear-gradient(to bottom, white, #cff2ff);*/
+/*}*/
+
+/*.align-content-center {*/
+/*  text-align: center;*/
+/*}*/
+
+/*#checkmark, #xmark {*/
+/*  margin-top: -0.5%;*/
+/*  margin-bottom: 1.5%;*/
+/*  height: 10%;*/
+/*  width: 10%;*/
+/*}*/
+
+/*#xmark {*/
+/*  height: 8%;*/
+/*  width: 8%;*/
+/*}*/
+
+/*.star {*/
+/*  position: relative;*/
+/*  display: inline-block;*/
+/*  font-size: 3rem;*/
+/*  color: #d3d3d3;*/
+/*}*/
+
+/*.full {*/
+/*  color: red;*/
+/*}*/
+
+/*.half {*/
+/*  position: absolute;*/
+/*  overflow: hidden;*/
+/*  color: red;*/
+/*}*/
+
+.form-control {
+  width: 300px;
 }
 
-#column {
-  width: 5px;
-  color: green;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 body {
   min-width: 25vw;
@@ -31,8 +139,8 @@ body {
 }
 
 #fountain_header {
-  padding-left: 38px;
   padding-top: 5px;
+  display: inline-list-item;
   background-color: white;
   font-size: 21px;
   height: 45px;
@@ -53,19 +161,12 @@ body {
   text-align: center;
 }
 
+#typeahead-basic {
+  display: inline-block;
+}
 
 #myUL{
   text-align: center;
-}
-
-ngb-rating {
-  margin-top: -5rem;
-  margin-bottom: -6rem;
-}
-
-#add-rating-card {
-  width: auto;
-  font-weight: bolder;
 }
 
 .card {
@@ -85,28 +186,25 @@ ngb-rating {
   height: 3rem;
 }
 
-#typeahead-basic {
-  display: inline-block;
-}
-
 [id^="cardFtn"] {
   list-style: none;
   padding-top: 25px;
-  padding-right: 0px;
+  padding-right: 12%;
   font-family: Roboto, serif;
 }
 
 #nav {
-  position:sticky;
-  padding-right: 44px;
   width: auto;
   font-family: Roboto, serif;
-  height: 536px;
+  height: 75vh;
   overflow:hidden;
   overflow-y: scroll;
   background-image: linear-gradient(to bottom, white, #cff2ff);
 }
 
+#list li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
 
 .align-content-center {
   text-align: center;
@@ -116,7 +214,7 @@ ngb-rating {
   margin-top: -0.5%;
   margin-bottom: 1.5%;
   height: 10%;
-
+  width: 10%;
 }
 
 #xmark {
@@ -137,6 +235,7 @@ ngb-rating {
 
 .half {
   position: absolute;
+  display: inline-block;
   overflow: hidden;
   color: red;
 }
