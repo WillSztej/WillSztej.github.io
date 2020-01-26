@@ -18,8 +18,9 @@
   font-size: 35px;
 }
 
-
 #topNavUpperBoarder {
+  height: 3px;
+  color: midnightblue;
 }
 
 #topNav {
@@ -29,9 +30,8 @@
 
 #router_home, #router_discussion, #router_profile {
   color: white;
-  font-size: 15px;
-  padding-left: 10px;
+  font-size: 14px;
+  padding-left: 15px;
   padding-right: 50px;
-
 }
 

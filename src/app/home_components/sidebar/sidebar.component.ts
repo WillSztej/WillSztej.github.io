@@ -2,6 +2,8 @@ import { Component, OnChanges, OnInit, Input, SimpleChanges} from '@angular/core
 import { HomeMainComponent } from '../home-main/home-main.component';
 import {Fountain} from '../../fountain/fountain.model';
 import {FountainService} from '../../fountain/fountain.service';
+import {Observable} from 'rxjs';
+import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,19 +12,34 @@ import {FountainService} from '../../fountain/fountain.service';
 })
 export class SidebarComponent implements OnInit, OnChanges {
 
+  constructor(private homeComponent: HomeMainComponent,
+              private fountainService: FountainService) { }
+
   @Input()
   fountains: Fountain[];
   fountain: Fountain;
 
-  constructor(private homeComponent: HomeMainComponent,
-              private fountainService: FountainService) { }
+  fountainNames: string[] = [];
+
+  public model: any;
 
   ngOnInit() {
   }
+  search = (text$: Observable<string>) =>
+    text$.pipe(
+      debounceTime(200),
+      distinctUntilChanged(),
+      map(term => term.length < 2 ? []
+        : this.fountainNames.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10)))
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.fountains && this.homeComponent.isLoaded) {
       this.fountains.sort((a, b) => (parseInt(a.id, 10) > parseInt(b.id, 10)) ? 1 : -1);
+      // tslint:disable-next-line:prefer-for-of
+      for (let i = 0; i < this.fountains.length; i++) {
+        this.fountainNames.push('Fountain ' + this.fountains[i].id);
+      }
+      console.log(this.fountainNames)
       this.ngOnInit();
     }
   }
@@ -35,32 +52,6 @@ export class SidebarComponent implements OnInit, OnChanges {
     });
   }
 
-  searchSort() {
-    console.log('function starting');
-    // Declare variables
-    let input;
-    let filter;
-    let ul;
-    let li;
-    let a;
-    let i;
-    let txtValue;
-    input = document.getElementById('myInput');
-    filter = input.value.toUpperCase();
-    ul = document.getElementById('list');
-    li = ul.getElementsByTagName('li');
-
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName('a')[0];
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        li[i].class = 'hide';
-      } else {
-        li[i].class = 'hide';
-      }
-    }
-  }
 }
 
 

@@ -1,3 +1,8 @@
+.form-control {
+  width: 300px;
+}
+
+
 body {
   min-width: 25vw;
 }
@@ -18,7 +23,7 @@ body {
 
 #fountain_header {
   padding-top: 5px;
-  text-align: center;
+  display: inline-list-item;
   background-color: white;
   font-size: 21px;
   height: 45px;
@@ -26,11 +31,20 @@ body {
   color: midnightblue;
 }
 
+#sidebar-div {
+  text-align: center;
+}
+
+#typeahead-basic {
+  display: inline-block;
+}
+
 #myUL{
   text-align: center;
 }
 
 .card {
+  display: inline-list-item;
   margin: 0px auto;
   margin-top: 2rem;
   float: none;
@@ -49,13 +63,13 @@ body {
 [id^="cardFtn"] {
   list-style: none;
   padding-top: 25px;
-  padding-right:50px;
+  padding-right: 12%;
   font-family: Roboto, serif;
 }
 
 #nav {
+  width: auto;
   font-family: Roboto, serif;
-  text-align: center;
   height: 90vh;
   overflow:hidden;
   overflow-y: scroll;
