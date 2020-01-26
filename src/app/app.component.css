@@ -12,7 +12,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: Arial, serif;
-  align-content: center;
+  align-content: normal;
   letter-spacing: 2px;
   font-size: 25px;
 }
