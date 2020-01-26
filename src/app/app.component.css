@@ -1,3 +1,4 @@
+
 #header {
   height: 50px;
   background-image: linear-gradient(to right, white, #cff2ff);
@@ -9,7 +10,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-left: 10px;
-  font-family: Roboto, serif;
+  font-family: Arial, serif;
   padding-bottom: 20px;
   align-content: center;
   letter-spacing: 2px;
@@ -17,23 +18,8 @@
   font-size: 35px;
 }
 
-#home {
-  padding-left: 30px;
-  padding-right: 50px;
-  color: white;
-}
-#discussion {
-  padding-right: 50px;
-  color: white;
-}
-
-#account {
-  color:white;
-}
 
 #topNavUpperBoarder {
-  height: 2px;
-  color: #6d95f2;
 }
 
 #topNav {
@@ -41,19 +27,11 @@
   font-family: Roboto, serif;
 }
 
-.boxed {
-  border: 4px solid lightskyblue;
-  display: inline-block;
-  fill: green;
-  align-content: center;
-}
-
 #router_home, #router_discussion, #router_profile {
-  text-align: center;
-  font-size: 15px;
   color: white;
-  padding-right: 60px;
-  padding-left: 5px;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-right: 50px;
 
 }
 

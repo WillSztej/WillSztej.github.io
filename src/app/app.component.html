@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!-- For Firefox -->
+<div class="loading loading-2 wave wave-2">
+  <div class="ff">For browsers that don't support background-clip:text:</div>
+  <div class="loading-2-text"></div>
+</div>
 <html>
 <div style="min-width: 200px; margin: 0 auto;">
   <div id = "header">
@@ -10,15 +15,9 @@
   <div id = "topNavUpperBoarder"></div>
   <div id = "topNav">
     <nav>
-        <div class ="boxed">
-        <a id = "router_home" [routerLink] ="'/home'" routerLinkActive="active" >Home</a>
-        </div>
-        <div class ="boxed">
-        <a id = "router_discussion" [routerLink] ="'/discussion'" routerLinkActive="active" >Discussion</a>
-        </div>
-        <div class ="boxed">
-        <a id = "router_profile" [routerLink] = "'/my profile'" routerLinkActive="active" >My Profile</a>
-        </div>
+        <a id = "router_home" [routerLink] ="'/home'" routerLinkActive="active" >home</a>
+        <a id = "router_discussion" [routerLink] ="'/discussion'" routerLinkActive="active" >discussion</a>
+        <a id = "router_profile" [routerLink] = "'/my profile'" routerLinkActive="active" >profile</a>
     </nav>
     <router-outlet></router-outlet>
   </div>
