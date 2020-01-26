@@ -1,3 +1,4 @@
+
 <ng-template #t let-fill="fill">
   <span class="star" [class.full]="fill === 100">
     <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
@@ -61,6 +62,10 @@
                 [title]="marker.title"
                 (markerClick)="onFountainClicked(marker.title, longContent)">
     </agm-marker>
+    <agm-marker *ngIf="userLocation" [latitude]="location.lat"
+                [longitude]="location.lng"
+                [title]="userMarkerTitle"
+                [iconUrl]="icon"></agm-marker>
   </agm-map>
   <app-sidebar [fountains]="fountains"></app-sidebar>
 </div>

@@ -1,7 +1,16 @@
-.form-control {
-  width: 300px;
+
+
+#sidebar-div {
+  position: sticky;
+  float:left;
 }
 
+#column {
+  width: 5px;
+  color: green;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 body {
   min-width: 25vw;
@@ -22,8 +31,8 @@ body {
 }
 
 #fountain_header {
+  padding-left: 38px;
   padding-top: 5px;
-  display: inline-list-item;
   background-color: white;
   font-size: 21px;
   height: 45px;
@@ -44,9 +53,6 @@ body {
   text-align: center;
 }
 
-#typeahead-basic {
-  display: inline-block;
-}
 
 #myUL{
   text-align: center;
@@ -79,25 +85,28 @@ ngb-rating {
   height: 3rem;
 }
 
+#typeahead-basic {
+  display: inline-block;
+}
+
 [id^="cardFtn"] {
   list-style: none;
   padding-top: 25px;
-  padding-right: 12%;
+  padding-right: 0px;
   font-family: Roboto, serif;
 }
 
 #nav {
+  position:sticky;
+  padding-right: 44px;
   width: auto;
   font-family: Roboto, serif;
-  height: 90vh;
+  height: 536px;
   overflow:hidden;
   overflow-y: scroll;
   background-image: linear-gradient(to bottom, white, #cff2ff);
 }
 
-#list li a:hover:not(.header) {
-  background-color: #eee; /* Add a hover effect to all links, except for headers */
-}
 
 .align-content-center {
   text-align: center;
@@ -107,7 +116,7 @@ ngb-rating {
   margin-top: -0.5%;
   margin-bottom: 1.5%;
   height: 10%;
-  width: 10%;
+
 }
 
 #xmark {
@@ -128,7 +137,6 @@ ngb-rating {
 
 .half {
   position: absolute;
-  display: inline-block;
   overflow: hidden;
   color: red;
 }
