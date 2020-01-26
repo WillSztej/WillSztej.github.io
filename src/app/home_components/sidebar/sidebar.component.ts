@@ -1,5 +1,5 @@
 import { Component, OnChanges, OnInit, Input, SimpleChanges} from '@angular/core';
-import { AppComponent } from '../../app.component';
+import { HomeMainComponent } from '../home-main/home-main.component';
 import {Fountain} from '../../fountain/fountain.model';
 import {FountainService} from '../../fountain/fountain.service';
 
@@ -14,22 +14,22 @@ export class SidebarComponent implements OnInit, OnChanges {
   fountains: Fountain[];
   fountain: Fountain;
 
-  constructor(private appComponent: AppComponent,
+  constructor(private homeComponent: HomeMainComponent,
               private fountainService: FountainService) { }
 
   ngOnInit() {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes.fountains) {
+    if (changes.fountains && this.homeComponent.isLoaded) {
+      this.fountains.sort((a, b) => (parseInt(a.id, 10) > parseInt(b.id, 10)) ? 1 : -1);
       this.ngOnInit();
     }
   }
 
-
   onClickSeeReviews(title: string, longContent) {
     this.fountain = this.fountains.find(o => o.id === title);
-    const modalRef = this.appComponent.modalService.open(longContent, {
+    const modalRef = this.homeComponent.modalService.open(longContent, {
       scrollable: true,
       size: 'lg'
     });

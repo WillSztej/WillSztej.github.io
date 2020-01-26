@@ -32,6 +32,7 @@ body {
 
 .card {
   margin: 0px auto;
+  margin-top: 2rem;
   float: none;
   margin-bottom: 10px; /* Added */
 }
@@ -63,4 +64,38 @@ body {
 
 #list li a:hover:not(.header) {
   background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+.align-content-center {
+  text-align: center;
+}
+
+#checkmark, #xmark {
+  margin-top: -0.5%;
+  margin-bottom: 1.5%;
+  height: 10%;
+  width: 10%;
+}
+
+#xmark {
+  height: 8%;
+  width: 8%;
+}
+
+.star {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  color: #d3d3d3;
+}
+
+.full {
+  color: red;
+}
+
+.half {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  color: red;
 }

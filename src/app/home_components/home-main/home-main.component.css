@@ -21,3 +21,38 @@ body {
 .card-header {
   height: 3rem;
 }
+
+ngb-rating {
+  margin-top: -5rem;
+  margin-bottom: -6rem;
+}
+
+#checkmark, #xmark {
+  margin-top: -0.5%;
+  margin-bottom: 1.5%;
+  height: 10%;
+  width: 10%;
+}
+
+#xmark {
+  height: 8%;
+  width: 8%;
+}
+
+.star {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  color: #d3d3d3;
+}
+
+.full {
+  color: red;
+}
+
+.half {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  color: red;
+}

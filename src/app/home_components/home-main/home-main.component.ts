@@ -28,15 +28,15 @@ export class HomeMainComponent implements OnInit {
   fountain: Fountain;
   markers: Marker[] = [];
   style = environment.mainMapStyle;
+  isLoaded = false;
 
   constructor(private fountainService: FountainService,
               private fireStorage: AngularFireStorage,
-              private modalService: NgbModal) { }
+              public modalService: NgbModal) { }
 
   ngOnInit() {
     this.fountainService.getFountains().subscribe(data => {
       this.fountains = data.map(e => {
-        console.log(e.payload.doc.data());
         return {
           id: e.payload.doc.id.toString(),
           ...e.payload.doc.data()
@@ -45,8 +45,10 @@ export class HomeMainComponent implements OnInit {
       for (const fountain of this.fountains) {
         this.addMarker(fountain.location.lat, fountain.location.lng, fountain.id);
       }
+      this.isLoaded = true;
     });
   }
+
   create(fountain: Fountain) {
     this.fountainService.createFountain(fountain);
   }
