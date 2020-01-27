@@ -63,7 +63,8 @@
     <agm-marker *ngIf="userLocation" [latitude]="location.lat"
                 [longitude]="location.lng"
                 [title]="userMarkerTitle"
-                [iconUrl]="icon"></agm-marker>
+                [iconUrl]="icon"
+                [zIndex]="9999999"></agm-marker>
   </agm-map>
   <app-sidebar [fountains]="fountains"></app-sidebar>
 </div>
