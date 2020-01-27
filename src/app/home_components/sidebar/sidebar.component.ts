@@ -12,7 +12,7 @@ import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
 })
 export class SidebarComponent implements OnInit, OnChanges {
 
-  constructor(private homeComponent: HomeMainComponent,
+  constructor(public homeComponent: HomeMainComponent,
               private fountainService: FountainService) { }
 
   @Input()
