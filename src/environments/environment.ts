@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  gmapkey: 'AIzaSyBdxkkNeHg0CvJxyUhXYxqmjZaIg487UWk',
+  gmapkey: 'AIzaSyBtHmFxyxUCmlF64cjvaDie0xvR1HGTQ_Y',
   firebaseConfig: {
     apiKey: 'AIzaSyBtHmFxyxUCmlF64cjvaDie0xvR1HGTQ_Y',
     authDomain: 'web-hydrate.firebaseapp.com',
