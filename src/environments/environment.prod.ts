@@ -8,8 +8,8 @@ export const environment = {
     projectId: 'web-hydrate',
     storageBucket: 'web-hydrate.appspot.com',
     messagingSenderId: '734409488963',
-    appId: '1:734409488963:web:a600f3bc82da741e52f2f6',
-    measurementId: 'G-QCL1KC1ZFY'
+    appId: '1:734409488963:web:a8ce3bc146d1fafc52f2f6',
+    measurementId: 'G-W6R9BQWFLX'
   },
   mainMapStyle: [
     {
